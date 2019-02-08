@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c2cdc08-8010-449c-99e0-031b2db6fa14" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,16 +112,6 @@
             <path>
               <item name="wikipedia_pages" type="b2602c69:ProjectViewProjectNode" />
               <item name="wikipedia_pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wikipedia_pages" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wikipedia_pages" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wikipedia_pages" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wikipedia_pages" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
