@@ -2,15 +2,15 @@
 
 ### Set Up
 
-Execute following commands to create virtual environment to work on project
-```
+Execute following terminal commands to create virtual environment to work on project
+```bash
 python -m virtualenv wikiEnv 
 source wikiEnv/bin/activate 
 pip install -r requirements.txt
 ```
 
 To activate virtual environment:
-```
+```bash
 source wikiEnv/bin/activate 
 ```
 
