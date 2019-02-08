@@ -23,7 +23,6 @@ class WikipediaScrapper():
             print('Article with the given name DNE')
             return []
 
-    def get_article(self, articleList):
 
 
     def get_url(self, articleName):
