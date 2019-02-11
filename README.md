@@ -3,16 +3,23 @@
 ### Set Up
 
 Execute following terminal commands to create virtual environment to work on project
-```bash
+```
 python -m virtualenv wikiEnv 
 source wikiEnv/bin/activate 
 pip install -r requirements.txt
 ```
 
 To activate virtual environment:
-```bash
+```
 source wikiEnv/bin/activate 
 ```
+
+### How to Run code
+
+In terminal type, replacing strin1 and string2:
+```python wikipedia_game.py <string1> <strin2>```
+
+
 
 For more info, read [Python Documentation](https://packaging.python.org/guides/installing-using-pip-and-virtualenv/)
 ### Sources

@@ -3,14 +3,15 @@ import wikipedia_api
 
 
 
-
-
 def run_wikipedia_search(inputObject):
 
 
-    wikiSearch = wikipedia_api.WikipediaScrapper(inputObject.startPage, inputObject.endPage)
+    wikiSearch = wikipedia_api.WikipediaScrapper()
 
-    wikiSearch.get_url(inputObject.startPage)
+    wikiSearch.get_article("New York")
+    # print(wikiSearch.is_exists("New York"))
+
+
 
 
 

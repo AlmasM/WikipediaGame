@@ -1,11 +1,8 @@
 import wikipedia
-
+import sys
 
 class WikipediaScrapper():
 
-    def __init__(self, startPage, endPage):
-        self.startPage = startPage
-        self.endPage = endPage
 
 
     def is_exists(self, articleName):
@@ -25,11 +22,15 @@ class WikipediaScrapper():
 
 
 
-    def get_url(self, articleName):
-        articleName = self.is_exists(articleName)[0]
+    def get_article(self, articleName):
 
-        articleObject = wikipedia.page(articleName)
-        print(articleObject.links)
+        articleName = wikipedia.suggest(articleName)
+        print(articleName)
+        sys.exit()
+
+        if articleName != "":
+            articleObject = wikipedia.page(articleName)
+            print(articleObject.links)
 
 
 
