@@ -3,8 +3,8 @@ import sys
 class ProcessInput():
 
     def __init__(self):
-        self.startPage = ''
-        self.endPage = ''
+        self.startPage = sys.argv[1]
+        self.endPage = sys.argv[2]
 
 
     def parse_input(self):
