@@ -1,14 +1,12 @@
 import wikipedia
+from difflib import get_close_matches
 import sys
 
 class WikipediaScrapper():
 
-<<<<<<< HEAD
-=======
     def __init__(self, articleName):
         self.articleName = articleName
         self.articleObject = object()
->>>>>>> c722ff3c66202758b84fe99386f4b7c090fd297d
 
 
     def is_exists(self):
@@ -38,28 +36,34 @@ class WikipediaScrapper():
             return True
 
 
-    def normalize_input(self, inputString):
-
-        # inputNorm = inputString.lower()
-        inputNorm = inputString.replace(" ", "_")
-
-        return inputNorm
 
     def get_object(self):
 
-        artName = self.normalize_input(self.articleName)
 
         try:
             self.is_exists()
 
-            self.articleObject = wikipedia.page(artName)
+            self.articleObject = wikipedia.page(self.articleName, auto_suggest=False)
+            # print("articleObject:{}".format(self.articleObject))
             self.is_connected()
 
 
         except wikipedia.exceptions.DisambiguationError as e:
 
-            articleModified = e.options[0]
-            self.articleObject = wikipedia.page(articleModified)
+            articleList = e.options
+            # print("ArticleList: {}".format(articleList))
+            articleModified = get_close_matches(self.articleName, articleList, n=1)
+
+            if articleModified == []:
+                articleModified = e.options[0]
+
+            # print("articleName: {} || ArticleModified: {}".format(self.articleName, articleModified))
+
+            self.articleObject = wikipedia.page(articleModified, auto_suggest=False)
+
+        except wikipedia.exceptions.PageError:
+            self.articleObject = []
+
 
 
 
@@ -67,19 +71,7 @@ class WikipediaScrapper():
         return self.articleObject.links
 
 
-<<<<<<< HEAD
-    def get_article(self, articleName):
 
-        articleName = wikipedia.suggest(articleName)
-        print(articleName)
-        sys.exit()
-
-        if articleName != "":
-            articleObject = wikipedia.page(articleName)
-            print(articleObject.links)
-=======
-
->>>>>>> c722ff3c66202758b84fe99386f4b7c090fd297d
 
 
 
